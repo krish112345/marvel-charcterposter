@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marvel Charcters</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .container {
+        overflow: hidden;
+      }
+      .col-4,
+      .col-2 {
+        transform: skew(-20deg);
+      }
+      #first {
+        bottom: -20%;
+        left: 5%;
+        height: 90%;
+        width: 65%;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+      #second {
+        bottom: -2%;
+        right: 5%;
+        height: 70%;
+        width: 65%;
+
+        z-index: 5;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+
+      #third {
+        height: 70%;
+        width: 65%;
+
+        left: 10%;
+        bottom: 13%;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+      .hello {
+        left: -20%;
+        top: 4%;
+        transform: skew(20deg);
+      }
+      h2,
+      h1 {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 900;
+        color: rgba(5, 9, 87, 0.91);
+      }
+      span {
+        width: 100%;
+        height: 35%;
+        h2 {
+          font-size: 45mm;
+          font-weight: 900;
+          font-family: "Bebas Neue", sans-serif;
+          transform: scaley(1.5);
+          background: linear-gradient(
+            181deg,
+            rgba(217, 217, 217, 1) 41%,
+            rgba(255, 255, 255, 1) 59%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      .image {
+        overflow: hidden;
+        img {
+          z-index: 10;
+          right: -15%;
+        }
+      }
+      .last {
+        right: 18%;
+        z-index: 10;
+        top: 5%;
+      }
+      .head {
+        font-size: 25mm;
+      }
+    </style>
+  </head>
+  <body class="vh-100">
+    <div
+      class="container-fluid h-75 position-relative"
+      style="
+        background: linear-gradient(
+          190deg,
+          rgba(255, 0, 0, 1) 56%,
+          rgba(255, 255, 255, 1) 56%
+        );
+      "
+    >
+      <h1 class="w-100 text-center text-white head">MARVEL</h1>
+      <h4 class="w-100 text-center text-white">CHARACTER PAGE DESIGN</h4>
+
+      <div class="container bg-white position-absolute" id="first">
+        <div class="row h-100">
+          <div class="col col-6 d-flex flex-column">
+            <h1>MARVEL</h1>
+            <span><h2>MARVEL</h2></span>
+            <p>Home/Characters</p>
+            <h2>CAPTAIN AMERICA</h2>
+            <div class="row">
+              <div class="col-10">
+                <p>
+                  From the dark days of world war to the explosive challenges of
+                  today, Super-Soldier Captain America stands ready as a shining
+                  sentinel of liberty to shield the oppressed and fight for
+                  freedom everywhere.
+                </p>
+              </div>
+              <div class="col-10 mb-5 d-flex gx-5">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-youtube ms-3"></i>
+                <i class="fa-brands fa-instagram ms-3"></i>
+                <i class="fa-brands fa-x-twitter ms-3"></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col col-4"
+            style="
+              background-image: url(images/CAP20WAR.webp);
+              background-size: cover;
+            "
+          >
+            <img
+              class="position-absolute hello"
+              src="images/captain-america-png-from-pngfre-9.png"
+              alt=""
+              height="120%"
+              width="160%"
+            />
+          </div>
+          <div
+            class="col col-2"
+            style="background-color: rgba(5, 9, 87, 0.91)"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid h-100 position-relative image">
+      <img
+        class="position-absolute imagereveal"
+        src="images/spider-man-png-from-pngfre-44-1.png"
+        alt=""
+        height="100%"
+      />
+      <div class="container position-absolute" id="second">
+        <div class="row h-100">
+          <div class="col col-6 d-flex flex-column justify-content-end">
+            <h1 class="text-danger">MARVEL</h1>
+            <span><h2>MARVEL</h2></span>
+            <p>Home/Characters</p>
+            <h2 class="text-danger">SPIDERMAN</h2>
+            <div class="row">
+              <div class="col-10">
+                <p>
+                  Bitten by a radioactive spider, Peter Parker gained incredible
+                  powers and became the amazing Spider-Man, protecting the
+                  innocent and fighting for justice while balancing his everyday
+                  life.
+                </p>
+              </div>
+              <div class="col-10 mb-5 d-flex gx-5">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-youtube ms-3"></i>
+                <i class="fa-brands fa-instagram ms-3"></i>
+                <i class="fa-brands fa-x-twitter ms-3"></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col col-4"
+            style="
+              background-image: url(images/80c11364fc0e0dedcb3aa95f66220e66.jpg);
+              background-size: cover;
+            "
+          ></div>
+          <div class="col col-2 bg-danger position-relative z-index-2"></div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-fluid h-100 position-relative"
+      style="
+        background: linear-gradient(
+          11deg,
+          rgba(255, 0, 0, 1) 37%,
+          rgba(255, 255, 255, 1) 37%
+        );
+      "
+    >
+      <img
+        class="position-absolute last"
+        src="images/Black-Panther-10.png"
+        alt=""
+        height="90%"
+        width="%"
+      />
+      <div class="container bg-white position-absolute" id="third">
+        <div class="row h-100">
+          <div class="col col-6 d-flex flex-column justify-content-end">
+            <h1 class="text-black">MARVEL</h1>
+            <span><h2>MARVEL</h2></span>
+            <p>Home/Characters</p>
+            <h2 class="text-black">BLACK PANTHER</h2>
+            <div class="row">
+              <div class="col-10">
+                <p>
+                  King T’Challa of Wakanda dons the mantle of the Black Panther,
+                  defending his people with unmatched strength, agility, and
+                  advanced technology.
+                </p>
+              </div>
+              <div class="col-10 mb-5 d-flex gx-5">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-youtube ms-3"></i>
+                <i class="fa-brands fa-instagram ms-3"></i>
+                <i class="fa-brands fa-x-twitter ms-3"></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col col-4"
+            style="
+              background-image: url(images/Infinity_War_220.webp);
+              background-size: cover;
+            "
+          ></div>
+          <div class="col col-2 bg-black"></div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
