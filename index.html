@@ -24,48 +24,12 @@
       referrerpolicy="no-referrer"
     />
     <style>
-      .container {
+      #overflow {
         overflow: hidden;
       }
       .col-4,
       .col-2 {
         transform: skew(-20deg);
-      }
-      #first {
-        bottom: -20%;
-        left: 5%;
-        height: 90%;
-        width: 65%;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-      }
-      #second {
-        bottom: -2%;
-        right: 5%;
-        height: 70%;
-        width: 65%;
-
-        z-index: 5;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-      }
-
-      #third {
-        height: 70%;
-        width: 65%;
-
-        left: 10%;
-        bottom: 13%;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-      }
-      .hello {
-        left: -20%;
-        top: 4%;
-        transform: skew(20deg);
       }
       h2,
       h1 {
@@ -73,9 +37,10 @@
         font-weight: 900;
         color: rgba(5, 9, 87, 0.91);
       }
+      .head {
+        font-size: 25mm;
+      }
       span {
-        width: 100%;
-        height: 35%;
         h2 {
           font-size: 45mm;
           font-weight: 900;
@@ -90,26 +55,92 @@
           -webkit-text-fill-color: transparent;
         }
       }
-      .image {
-        overflow: hidden;
-        img {
-          z-index: 10;
-          right: -15%;
+      #captain-america {
+        height: 100%;
+        z-index: 4;
+        bottom: 0%;
+        right: 0%;
+      }
+      #spiderman {
+        right: 0%;
+        bottom: 0%;
+        z-index: 2;
+      }
+      #black-panther {
+        z-index: 2;
+        right: 30%;
+      }
+      .container {
+        max-width: 1000px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+      /*----------------------------------responsive media query-------------------------  */
+      @media (max-width: 1100px) {
+        #black-panther {
+          right: 0%;
         }
       }
-      .last {
-        right: 18%;
-        z-index: 10;
-        top: 5%;
+      @media (max-width: 775px) {
+        #black-panther,
+        #spiderman {
+          height: 70%;
+        }
       }
-      .head {
-        font-size: 25mm;
+      @media (max-width: 700px) {
+        #black-panther,
+        #spiderman {
+          height: 60%;
+        }
+      }
+      @media (max-width: 600px) {
+        #black-panther,
+        #spiderman {
+          height: 50%;
+        }
+        #captain-america {
+          height: 80%;
+        }
+      }
+      @media (max-width: 500px) {
+        #black-panther,
+        #spiderman,
+        #captain-america {
+          position: static !important;
+          height: 60% !important;
+        }
+        .container-fluid {
+          height: auto !important;
+        }
+      }
+      @media (max-width: 430px) {
+        span {
+          h2 {
+            font-size: 40mm;
+          }
+        }
+      }
+      @media (max-width: 395px) {
+        span {
+          h2 {
+            font-size: 35mm;
+          }
+        }
+      }
+      @media (max-width: 345px) {
+        span {
+          h2 {
+            font-size: 30mm;
+          }
+        }
       }
     </style>
   </head>
   <body class="vh-100">
+    <!-- -------------------------captain-america------------------------------------------ -->
     <div
-      class="container-fluid h-75 position-relative"
+      class="container-fluid h-100 d-flex flex-column justify-content-start position-relative"
       style="
         background: linear-gradient(
           190deg,
@@ -121,13 +152,19 @@
       <h1 class="w-100 text-center text-white head">MARVEL</h1>
       <h4 class="w-100 text-center text-white">CHARACTER PAGE DESIGN</h4>
 
-      <div class="container bg-white position-absolute" id="first">
-        <div class="row h-100">
-          <div class="col col-6 d-flex flex-column">
+      <div class="container position-relative ms-0 bg-danger">
+        <div class="row bg-white" id="overflow">
+          <div class="col col-md-6 d-flex flex-column">
             <h1>MARVEL</h1>
-            <span><h2>MARVEL</h2></span>
+            <span><h2 class="">MARVEL</h2></span>
             <p>Home/Characters</p>
             <h2>CAPTAIN AMERICA</h2>
+            <img
+              class="position-absolute"
+              id="captain-america"
+              src="images/captain-america-png-from-pngfre-9.png"
+              alt=""
+            />
             <div class="row">
               <div class="col-10">
                 <p>
@@ -151,15 +188,7 @@
               background-image: url(images/CAP20WAR.webp);
               background-size: cover;
             "
-          >
-            <img
-              class="position-absolute hello"
-              src="images/captain-america-png-from-pngfre-9.png"
-              alt=""
-              height="120%"
-              width="160%"
-            />
-          </div>
+          ></div>
           <div
             class="col col-2"
             style="background-color: rgba(5, 9, 87, 0.91)"
@@ -167,20 +196,24 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid h-100 position-relative image">
-      <img
-        class="position-absolute imagereveal"
-        src="images/spider-man-png-from-pngfre-44-1.png"
-        alt=""
-        height="100%"
-      />
-      <div class="container position-absolute" id="second">
-        <div class="row h-100">
-          <div class="col col-6 d-flex flex-column justify-content-end">
+    <!-- -------------------------------------spiderman---------------------------------------- -->
+    <div
+      class="container-fluid position-relative my-5 h-100 d-flex flex-column justify-content-end"
+    >
+      <div class="container me-5" id="overflow">
+        <div class="row">
+          <div class="col col-md-6 d-flex flex-column justify-content-end">
             <h1 class="text-danger">MARVEL</h1>
             <span><h2>MARVEL</h2></span>
             <p>Home/Characters</p>
             <h2 class="text-danger">SPIDERMAN</h2>
+            <img
+              class="position-absolute"
+              id="spiderman"
+              src="images/spider-man-png-from-pngfre-44-1.png"
+              alt=""
+              height="90%"
+            />
             <div class="row">
               <div class="col-10">
                 <p>
@@ -209,8 +242,9 @@
         </div>
       </div>
     </div>
+    <!-- --------------------------------------black panther------------------------------------- -->
     <div
-      class="container-fluid h-100 position-relative"
+      class="container-fluid position-relative h-100 d-flex flex-column justify-content-end"
       style="
         background: linear-gradient(
           11deg,
@@ -219,20 +253,20 @@
         );
       "
     >
-      <img
-        class="position-absolute last"
-        src="images/Black-Panther-10.png"
-        alt=""
-        height="90%"
-        width="%"
-      />
-      <div class="container bg-white position-absolute" id="third">
-        <div class="row h-100">
-          <div class="col col-6 d-flex flex-column justify-content-end">
+      <div class="container mb-5 ms-0 bg-white">
+        <div class="row" id="overflow">
+          <div class="col col-md-6 d-flex flex-column justify-content-end">
             <h1 class="text-black">MARVEL</h1>
             <span><h2>MARVEL</h2></span>
             <p>Home/Characters</p>
             <h2 class="text-black">BLACK PANTHER</h2>
+            <img
+              class="position-absolute"
+              id="black-panther"
+              src="images/Black-Panther-10.png"
+              alt=""
+              height="90%"
+            />
             <div class="row">
               <div class="col-10">
                 <p>
